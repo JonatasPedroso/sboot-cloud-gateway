@@ -20,6 +20,7 @@ public class SbootCloudGatewayApplication {
 		return builder
 				.routes()
 				.route(r -> r.path("/cliente/**").uri("lb://sboot-cliente-service"))
+				.route(r -> r.path("/cartoes/**").uri("lb://sboot-cartoes-service"))
 				.build();
 	}
 
